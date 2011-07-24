@@ -1,0 +1,15 @@
+--- src/examples/servlet/XMLServlet.java.orig	2003-06-03 16:29:23.000000000 -0400
++++ src/examples/servlet/XMLServlet.java	2004-03-11 16:54:33.000000000 -0500
+@@ -322,6 +322,12 @@
+         }
+ 
+ 
++        public void resetBuffer()
++        {
++            _response.resetBuffer();
++        }
++
++
+         public boolean isCommitted()
+         {
+             return _response.isCommitted();

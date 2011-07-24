@@ -1,0 +1,28 @@
+--- src/examples/servlet/XMLServlet.java.orig	2004-07-23 18:45:59.000000000 -0400
++++ src/examples/servlet/XMLServlet.java	2004-07-23 19:01:30.000000000 -0400
+@@ -277,6 +277,12 @@
+         }
+ 
+ 
++        public void setCharacterEncoding( String enc )
++        {
++            _response.setCharacterEncoding( enc );
++        }
++
++
+         public ServletOutputStream getOutputStream()
+             throws IOException
+         {
+@@ -297,6 +303,12 @@
+         }
+ 
+ 
++        public String getContentType()
++        {
++            return _response.getContentType();
++        }
++
++
+         public void setContentType( String type )
+         {
+             _response.setContentType( type );
